@@ -1,0 +1,68 @@
+/* Page Specific CSS */
+
+body {font-family: Open Sans; color: #333; font-size: 16px;  margin: 0px; }
+h1 {font-size: 60px; font-family: Muli; font-weight: normal; margin: 0px; color: #1c395d;}
+h2 {font-size: 50px; font-family: Muli; font-weight: normal; margin: 11px 0px; color: #1c395d}
+h3 {font-family: Muli; font-size: 30px; margin: 10px 0px; color: #1c395d}
+h4 {font-family: Open Sans; font-size: 24px; color: #1c395d}
+.ISBLogo {
+  width: 200px;
+  border-bottom: none;
+}
+img {width: 100%;} 
+label { color: #1c395d; padding-right: 10px;}
+p a, a {color: #1c395d; text-decoration: none; padding-bottom: 0px; border-bottom: 1px #FD9393 solid;}
+a:hover {color: #47CCFC;}
+small {padding: 10px 0px; font-size: 10px;}
+p {margin: 0px; padding: 0px; font-size: 12px;}
+li {line-height: 19px; font-size: 12px; color: #1c395d}
+ol {line-height: 24px;}
+a.button {border: none;}
+
+pre {word-wrap: break-word; padding: 14px; background: #F0F0F0; }
+code {font-family: "Consolas", "Ubuntu Mono", monospace; line-height: 22px; font-size: 13px; color: #636363; font-weight: normal;}
+
+#hdControls { padding-bottom: 10px; }
+select { margin-right: 20px; }
+#hdScatter {height: 500px; width: 100%; background: #DADADA; margin: 0px auto;}
+#hdScatter a {border: none;}
+.yAxis text {
+  font: 10px sans-serif;
+}
+.yAxisLabel {
+  font: 12px sans-serif ! important;
+}
+.xAxis text {
+  font: 12px sans-serif;
+}
+
+.container {margin: 24px 0px;}
+
+::selection {background: #E5FF1D;} 
+::-moz-selection {background: #E5FF1D;}
+
+ul.nav {list-style: none; margin: 0px; padding: 0px;}
+ul.nav li {display: inline; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding-right: 4px;}
+ul.nav li a {border: none;}
+ul.nav li a:hover {border-bottom: 1px #FD9393 solid;}
+
+#wrapper {margin: 0px auto; max-width: 900px; padding-top: 20px; /*margin-left: 250px;*/}
+
+.button {padding: 5px 5px; background-color: #BEBEBE; font-size: 10px; color: #fff;}
+.button:hover {background: #B9FCFC; color: #47CCFC;}
+.fauxButton {padding: 5px 5px; background-color: #FF4646; font-size: 11px; color: #fff; display: inline;}
+.fauxButton .selected {background-color: #FF4646;}
+.colorText {color: #FF4646; text-transform: uppercase; font-weight: 700;}
+
+
+#info p {font-size: 14px; padding: 4px; line-height: 19px; font-weight: 300;}
+#info {border-top: 4px #F8F8F8 solid;}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 1024px) {
+  body {border: 20px #F8F8F8 solid; margin: 0px; padding: 20px 20px 80px 20px;}
+  #tableFilter, .clear, .resetMap {display: none;}
+  #wrapper {max-width: 460px; padding-top: 20px;}
+  #healthDataTable, #map {min-width: 224px;}
+}
+

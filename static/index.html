@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	
+
+	<title>Data Patterns | Institute for Systems Biology</title>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Muli:400,700'>
+	
+	<!-- FONT-ICONS -->
+	<link rel="stylesheet" href="minify/nc_font_min.css">
+
+	<!-- LIB -->
+	<link rel="stylesheet" href="minify/nc_lib_min.css">
+
+	<!-- EFFECT -->
+	<link rel="stylesheet" href="lib/snow-3d/snow-effect.css">
+	
+	<!-- TEMPLATE -->
+	<link rel="stylesheet" href="minify/nc_main_min.css">
+
+	<!-- CUSTOM -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Favicons -->
+	<link rel="icon" href="images/favicons/favicon.ico">
+	
+</head>
+<body class="nc-single-bg" onload="init()">
+	
+	<!-- MAIN-WRAPPER -->
+	<div class="nc-main-wrapper">
+		
+		<!-- BACKGROUND -->
+		<div class="nc-background bg-cover bg-cc" data-bg="images/bg-data2.png">
+
+		</div><!-- / BACKGROUND -->
+
+		<!-- DATA BUBBLES -->
+		<div id="snow-wrp">
+			
+		</div>
+		<!-- DATA BUBBLES END -->
+	
+		<!-- OVERLAY -->
+		<div class="nc-overlay z0" 
+			data-gradient="y" 
+			data-g-colors="rgba(15,115,238,0.3)|rgba(0, 0, 0,0.9)">
+			
+		</div>  
+
+		<!-- INTRO-SECTION -->
+		<div class="intro-section intro-section-1 flex-cc">
+			<div class="inner-wrapper w100">
+				
+				<!-- HEADER -->
+				<div class="nc-header absolute top left w100" data-nc-sm="pos-rel align-c">
+					<div class="container-fluid pd-lr-0">
+						<a href="http://systemsbiology.org" target = "_blank" class="inline-block px-w200 mr-60 animated s008" data-animIn="fadeIn|0.1" data-nc-md="mr-30" data-nc-sm="mr-0 mr-b-40">
+							<img src="images/isb-logo.png" alt="ISB">
+						</a>
+					</div>
+				</div><!-- / HEADER -->
+
+				<div class="nc-maintext align-c mr-120" data-nc-sm="align-c mr-0">
+					
+						<div class="flex-row middle-lg middle-md middle-sm">
+					
+							<div class="text-animation w90 mr-auto animated s008" data-animIn="fadeInUp|0.3">
+								
+								
+										<div class="item">
+                <h1 data-nc-md="xlarge mr-b-0" data-nc-sm="large" class="nc-maintext--text f-3 title bold-5 fs80">
+                                   <span class=  "color: txt-white" style="letter-spacing:.05em">
+                                        Data Patterns
+                                       </span> 
+                                   </h1>
+                                   </div>
+										
+								
+								
+							</div>	
+					
+					
+			</div>
+
+					<h3 class="typo-light w80 mr-auto italic animated s008" data-animIn="fadeInUp|0.4" data-nc-md="w80" data-nc-sm="w100 pd-lr-20 large">
+						<span class="color: txt-white">What can my data tell me about my health?<br/>I notice... I wonder...<br/><br/></span>
+					</h3>
+                                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfReujqrZKR7Eh3m0PbUnKcxtyDTSLB7btrYWm-U5MlVokV8Q/viewform" target="_blank" title="submit" class="f-3 btn btn-color1 solid small px-w140 mr-lr-10 animated s008" data-animIn="fadeInUp|0.5" data-nc-sm="mr-5">Submit Data</a>
+					<a href="http://isbscience.org/mydata/datapatterns.html" target="_blank" title="explore" class="f-3 btn btn-color1 solid small px-w140 mr-lr-10 animated s008" data-animIn="fadeInUp|0.5" data-nc-sm="mr-5">Explore Data</a>
+				</div>
+				<!-- / MAIN-TEXT -->
+
+				<!-- BUTTONS -->
+
+				<!-- / BUTTONS -->
+				
+				<div class="pos-abs bottom w100 pd-60" data-nc-md="pd-30" data-nc-sm="pos-rel align-c pd-30">
+					
+					<div class="flex-row">
+
+						<div class="flex-col-md-6" data-nc-sm="align-c">
+							<!-- INFO-LINK -->	
+							<div class="nc-infolinks">
+								
+								
+								
+							</div><!-- / INFO-LINK -->
+						</div>
+						
+						<hr class="hide" data-nc-sm="block">
+
+						<div class="flex-col-md-6 align-r" data-nc-sm="align-c">
+
+							<!-- SOCIAL-LINKS -->	
+							<div class="nc-social">
+								
+								
+								<a href="https://www.facebook.com/isbsci/" title="facebook" target= "_blank" class="nc-social--links inline-flex flex-cc sq40 fs20 txt-white hov-txt-color1 animated s008" data-animIn="fadeIn|0.3">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a>
+								
+								
+								<a href="https://www.youtube.com//user/ISBSystemsBiology" target= "_blank" title="youtube" class="nc-social--links inline-flex flex-cc sq40 fs20 txt-white hov-txt-color1 animated s008" data-animIn="fadeIn|0.6">
+									<i class="fa fa-youtube" aria-hidden="true"></i>
+								</a>
+								<a href="https://twitter.com/isbsci" target= "_blank" title="twitter" class="nc-social--links inline-flex flex-cc sq40 fs20 txt-white hov-txt-color1 animated s008" data-animIn="fadeIn|0.7">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
+								</a>
+								<a href="https://in.linkedin.com/company/institute-for-systems-biology" target= "_blank" title="linkedin" class="nc-social--links inline-flex flex-cc sq40 fs20 txt-white hov-txt-color1">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+								
+								
+							</div><!-- / SOCIAL-LINKS -->	
+							
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div><!-- / INTRO-SECTION -->
+
+
+
+	
+
+		
+	</div><!-- / MAIN-WRAPPER -->
+
+	<script>
+		/* Use fonts with class name in sequence => f-1, f-2, f-3 .... */
+		var fgroup = [
+			'Open Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic',
+			'Muli:300,400,500,600,700,800'
+		];
+	</script>
+
+	<!-- TEMPLATE -->
+	<script type="text/javascript" src="minify/nc_js_min.js"></script>
+	<script type="text/javascript" src="js/nc.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script type="text/javascript" src="lib/snow-3d/ThreeCanvas.js"></script>
+	<script type="text/javascript" src="lib/snow-3d/Snow.js"></script>
+	<script type="text/javascript" src="lib/snow-3d/snow-effect.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Data Patterns</title>
+    <meta charset='utf-8'>
+    <script type="text/javascript" src='js/jquery.js'></script>
+    <script type="text/javascript" src='js/healthData.js'></script>
+    <script type="text/javascript" src='js/lodash.js'></script>
+    <!--<script type="text/javascript" src='js/tabletop1.3.4.js'></script>
+    <script type="text/javascript" src='js/sheetsee.js'></script>-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <!-- Load jQuery and Sheetrock from Unpkg -->
+    <script type="text/javascript" src="js/papaparse.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Muli:400,700'>
+    <link media="screen" rel="stylesheet" type="text/css" href="css/style.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Data Patterns
+	<a class="ISBLogo" href="http://www.systemsbiology.org"><img class="ISBLogo" src="images/ISB_Logo2021.jpg" /></a>
+	</h1>
+        <div>
+            <ul class="nav">
+                <li><strong>What can my data tell me about my health?</strong></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfReujqrZKR7Eh3m0PbUnKcxtyDTSLB7btrYWm-U5MlVokV8Q/viewform">ANSWER SURVEY</a> -</li>
+                <li><a href="http://www.github.com/denisemauldin/health-data" target="_blank">GITHUB</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div id="hdControls"></div>
+            <div id="hdScatter"></div>
+        </div>
+		<div>
+			<h3>Potential Discussion Questions: </h3>
+			<ul>
+				<li>Do you notice any patterns you would like to explore further?</li>
+				<li>What if we had data from 1000s of people? </li>
+				<li>What if we could get this data everyday for a year? </li>
+				<li>What if we collected other data types (i.e. blood pressure, genetics, time spent sitting)?</li>
+			</ul>
+		</div>
+    </div>
+    <!-- end wrapper -->
+    <script id="healthDataTable" type="text/html">
+        <table>
+            <tr>
+                <th>Birth Sex</th>
+                <th>My current skin temperature:</th>
+                <th>How many hours of sleep did you have last night?</th>
+				<th>Can you taste PTC?</th>
+				<th>Are you lactose intolerant?</th>
+                <th>Did you eat breakfast this morning?</tr>
+            {{#rows}}
+            <tr id="{{rowNumber}}" class="spotRow">
+                <td>{{biology-iam}}</td>
+                <td>{{biology-mycurrentskintemperature}}</td>
+                <td>{{behavior-howmanyhoursofsleepdidyougetlastnight}}</td>
+				<td>{{genetics-canyoutasteptc}}</td>
+				<td>{{genetics-areyoulactoseintolerant}}</td>
+                <td>{{behavior-didyoueatbreakfastthismorning}}</tr>
+            {{/rows}}
+        </table>
+    </script>
+    
+    <script type="text/javascript">
+        // Define spreadsheet URL.
+        window.googleDocCallback = function () { return true; };
+        var mySpreadsheet = "https://sheets.googleapis.com/v4/spreadsheets/1fu748Nvn8G6FwzmrElw7XhkfTG6e7z4mIlF9i1qrGu4/values/B1:Z10000/?key=AIzaSyAojyouSn48m8xCBVdwuVbbvJYcsrqXXsw";
+        
+        fetch(mySpreadsheet).then(response =>
+            response.json().then(result => {
+                let data = Papa.parse(Papa.unparse(result.values), { header: true });
+                showInfo(data);
+            })
+        );
+    </script>
+</body>
+
+</html>

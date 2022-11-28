@@ -1,0 +1,22 @@
+/* General */
+
+/*  body {margin: 0px auto;}
+  a {color: #333;}
+  small {padding: 10px 0px;}
+  #wrapper {margin: 0px auto; }
+  .button {padding: 5px 4px; background-color: #fff; font-size: 10px;}*/
+  .button:hover {cursor: hand;}
+  input:focus {outline: none;}
+
+/* Table */
+
+  table {text-align: left; width: 100%}
+  th {padding: 10px 0px;}
+  td, text {padding: 3px 0 3px 0; font-size: 14px;}
+  #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Merriweather; color: #fff; font-size: 13px; height: 22px;}
+  .noMatches {margin-left: 20px; font-size: 11px; font-style: italic; visibility: hidden;}
+
+/* Containers */
+  .container {margin: 14px 0px;}
+  #hdScatter {height: 450px; width: 800px; background: #DADADA;}
+  div.tooltip {position: absolute; text-align: left; padding: 4px 8px; width: auto; font-size: 10px; height: auto; background: #fff; border: 0px; pointer-events: none;}
